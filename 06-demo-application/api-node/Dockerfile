@@ -3,7 +3,7 @@
 FROM node:20.14-bullseye-slim AS base
 
 # Set NODE_ENV
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 # Specify working directory other than /
 WORKDIR /usr/src/app
