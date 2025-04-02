@@ -36,7 +36,7 @@ tasks:
     env:
       DOCKER_USERNAME:
       DOCKER_EMAIL:
-      DOCKER_PASSWORD:
+      DOCKER_PASSWORD: dckr_pat_...
     cmds:
       - |
         if [ -z "$DOCKER_USERNAME" ] || [ -z "$DOCKER_EMAIL" ] || [ -z "$DOCKER_PASSWORD" ]; then
@@ -57,7 +57,7 @@ tasks:
           gum style "$(cat <<EOF
           🚨  You will need to push a copy of the corresponding container image
           🚨  container image to a repository of your own because 
-          🚨  sidpalas/devops-directive-kubernetes-course-load-generator-python
+          🚨  tullo/devops-directive-kubernetes-course-load-generator-python
           🚨  is private (to demonstrate how image pull secrets work)
           EOF
           )"
