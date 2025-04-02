@@ -6,7 +6,6 @@
     "gh@latest",
     "go@latest",
     "go-task@latest",
-    "path:gcloud#google-cloud-sdk",
     "gum@latest",
     "jq@latest",
     "k9s@latest",
@@ -24,7 +23,9 @@
     "tilt@latest",
     "yq-go@latest",
     "act@latest",
-    "kubent@latest"
+    "kubent@latest",
+    "google-cloud-sdk@latest",
+    "k3sup@latest"
   ],
   "shell": {
     "init_hook": [
