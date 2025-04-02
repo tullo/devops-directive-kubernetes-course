@@ -1,6 +1,6 @@
 # Pin specific version for stability
 # Use slim for reduced image size
-FROM node:20.14-bullseye-slim AS base
+FROM node:23.11-bullseye-slim AS base
 
 # Set NODE_ENV
 ENV NODE_ENV=production
