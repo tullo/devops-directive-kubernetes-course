@@ -1,0 +1,20 @@
+# commands
+
+k get pod -n trivy-system
+
+k get crd | grep vulnerabilityreport
+
+clustervulnerabilityreports.aquasecurity.github.io     2025-03-25T08:22:43Z
+vulnerabilityreports.aquasecurity.github.io            2025-03-25T08:22:43Z
+
+k get clustervulnerabilityreports -n trivy-system
+k get vulnerabilityreports -n trivy-system
+k get vulnerabilityreports -A -o wide
+k get vulnerabilityreports  sssdds -A -o yaml | yq
+
+
+k apply -f job.yaml
+k get job.batch/node-collector-845b67c33 -n trivy-system --watch
+k describe job.batch/node-collector-845b67c33 -n trivy-system
+k events job.batch/node-collector-845b67c33 -n trivy-system
+k get pod -l job-name=node-collector-845b67c33 -n trivy-system --watch
