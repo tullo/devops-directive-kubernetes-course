@@ -10,3 +10,6 @@ tasks:
     desc: "Render production configuration"
     cmds:
       - kubectl kustomize ./production | yq
+#
+# k kustomize . | k apply -f -
+# k kustomize . | k delete -f -

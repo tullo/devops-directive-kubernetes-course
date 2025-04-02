@@ -42,3 +42,17 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
+
+# k get job
+#   NAME             STATUS   COMPLETIONS   DURATION   AGE
+#   no-permissions   Failed   0/1           4m2s       4m2s
+#
+# k get pod
+#   NAME                   READY   STATUS   RESTARTS   AGE
+#   no-permissions-687vw   0/1     Error    0          2m52s
+#   no-permissions-998kz   0/1     Error    0          3m8s
+#
+# k logs no-permissions-687vw
+#   Error from server (Forbidden): pods is forbidden: User "system:serviceaccount:04--rbac:default"
+#     cannot list resource "pods" in API group "" at the cluster scope
+#

@@ -17,6 +17,18 @@ Tilt allows for configurating your application such that each service will autom
 
 I have not optimized the build times with all of the possible options, but these applications are small enough that it is still quite fast!
 
+- React frontend: http://kubernetes-course.devopsdirective.com/
+  - localhost does not work!
+- Fast dev synch instead of image/container rebuild
+  - https://docs.tilt.dev/tutorial/5-live-update.html
+  - https://docs.tilt.dev/example_go.html
+    - ```json
+      live_update=[
+        sync('./build', '/app/build'),
+        sync('./web', '/app/web'),
+      ],
+      ```
+
 ## Secrets Management
 
 Managing sensitive information like database credentials is often one of the most painful parts of any application deployment. The rest of the configuration lives within version control (e.g. Git), but we cannot safely store these credentials there. There are a variety of ways people approach this problem.

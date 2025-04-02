@@ -54,3 +54,15 @@ tasks:
         silent: true
       - kubectl delete -f Namespace.yaml
       - kubectl delete namespace ingress-nginx
+
+# for kind loadbalancer: one has to open a seperate terminal and run
+# task kind:03-run-cloud-provider-kind in 03-installation-and-setup dir
+# and leave that terminal running
+#
+# t 04-install-nginx-ingress-controller
+# t 05-apply-service-and-minimal-nginx-ingress
+# k get pod -n ingress-nginx
+# k get service -n ingress-nginx ingress-nginx-controller --output wide --watch
+#
+# sudo echo '172.18.0.5      ingress-example-nginx.com' >> /etc/hosts
+# curl ingress-example-nginx.com

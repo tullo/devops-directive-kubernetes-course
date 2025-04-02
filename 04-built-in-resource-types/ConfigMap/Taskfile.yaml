@@ -45,3 +45,16 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
+
+# k get cm file-like-keys -o yaml | yq ".data"
+# k get cm property-like-keys -o yaml | yq ".data"
+#
+# kubectl exec configmap-example -c nginx -- cat /etc/config/conf.yml
+#   name: YourAppName
+#   version: 1.0.0
+#   author: YourName
+#
+# kubectl exec configmap-example -c nginx -- printenv
+#   AUTHOR=YourName
+#   NAME=YourAppName
+#   VERSION=1.0.0

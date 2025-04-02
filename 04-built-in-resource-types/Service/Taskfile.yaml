@@ -42,3 +42,15 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
+
+# Notes:
+# curl internal services (cluster-ip/node-port
+# kubectl run curlpod --rm -it --image curlimages/curl:8.12.1 -- sh
+#   curl nginx-clusterip:80
+#   curl nginx-nodeport:80
+#
+#   curl nginx-nodeport.<ns>.svc.cluster.local:<port>
+#
+# for kind loadbalancer: one has to open a seperate terminal and run
+# task kind:03-run-cloud-provider-kind in 03-installation-and-setup dir
+# and leave that terminal running

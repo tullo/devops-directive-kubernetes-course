@@ -16,3 +16,8 @@ spec:
     metadata:
       annotations:
         iam.gke.io/gcp-service-account: cnpg-backups@kubernetes-course-424917.iam.gserviceaccount.com
+#
+# Barman (Backup and Recovery Manager)
+# https://pgbarman.org/
+# Taking an online hot backup of PostgreSQL is now as easy as ordering a good espresso coffee.
+#

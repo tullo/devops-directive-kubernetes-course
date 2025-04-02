@@ -42,3 +42,9 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
+
+# kubectl run curlpod --rm -it --image curlimages/curl:8.12.1 -- sh
+#   curl 10.96.136.109
+#     <h1>Hello from pod 1</h1>
+#   curl nginx
+#     <h1>Hello from pod 2</h1>

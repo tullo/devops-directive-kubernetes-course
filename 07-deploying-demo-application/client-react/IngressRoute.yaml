@@ -14,3 +14,4 @@ spec:
           name: client-react-nginx
           port: 8080
           scheme: http
+# http://kubernetes-course.devopsdirective.com/

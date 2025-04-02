@@ -10,6 +10,9 @@ Authors create `CustomResourceDefinitions` (CRDs) which enable Kubernetes to sto
 
 ## Examples
 
+❯ k get crd
+❯ k get crd gateways.gateway.networking.k8s.io -o yaml
+
 ### Extend Existing Capabilities
 
 In the previous section we installed and configured `Traefik`. While kubernetes does provide some ingress capabilities out of the box, Traefik has extended these with a set of their own resources. These can be seen by running (after installing it):

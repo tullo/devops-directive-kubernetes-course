@@ -35,3 +35,18 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
+
+# https://cronjob.guru
+# k get cj
+# k get job
+# =======================================================================
+# NAME                         STATUS     COMPLETIONS   DURATION   AGE
+# echo-date-minimal-29044691   Complete   1/1           2s         2m8s
+# echo-date-minimal-29044692   Complete   1/1           3s         68s
+# echo-date-minimal-29044693   Complete   1/1           3s         8s
+# =======================================================================
+#
+# for debugging, use the create job from= ...
+# kubectl create job --from=cronjob/echo-date-better
+# runs imediatly
+#

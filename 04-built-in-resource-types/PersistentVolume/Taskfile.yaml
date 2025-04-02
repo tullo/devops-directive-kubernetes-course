@@ -52,3 +52,10 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
+
+# k get storageclasses
+# k get pvc
+# k get pv
+# kubectl exec -it manual-pv-and-pvc -- bash
+# cd /some/mount/path
+# cat hello-from-host

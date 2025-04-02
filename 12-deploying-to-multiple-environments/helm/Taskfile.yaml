@@ -31,3 +31,11 @@ tasks:
       - task: build
       - task: push
     desc: "Build & Push the helm chart to an oci registry"
+#
+# helm:template-default
+# helm:template-staging
+# helm:template-production
+# helm:package
+# helm:push
+# helm:build-push  <==== ????
+# helm:package-push

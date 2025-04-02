@@ -16,3 +16,4 @@ spec:
           name: api-node
           port: 3000
           scheme: http
+# http://kubernetes-course.devopsdirective.com/api/node

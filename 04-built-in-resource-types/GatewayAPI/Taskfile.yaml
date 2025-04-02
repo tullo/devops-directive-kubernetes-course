@@ -62,4 +62,29 @@ tasks:
       - cmd: gum style "🚨 Deleting the namespace recursively deletes the resources inside of it! 🚨 "
         silent: true
       - kubectl delete -f Namespace.yaml
-      - kubectl delete ns haproxy-controller
+      - kubectl delete ns kong
+
+
+# for kind loadbalancer: one has to open a seperate terminal and run
+# task kind:03-run-cloud-provider-kind in 03-installation-and-setup dir
+# and leave that terminal running
+#
+# k get pod -n kong
+# k get pod kong-gateway-5c7b8fcc6d-f76sm -n kong
+# k describe pod kong-gateway-5c7b8fcc6d-f76sm -n kong
+# k events pod kong-gateway-5c7b8fcc6d-f76sm -n kong
+#
+# kubectl get service kong-gateway-proxy -n kong --output wide --watch
+#
+# k get gateway
+#   NAME   CLASS   ADDRESS      PROGRAMMED   AGE
+#   kong   kong    172.18.0.5   True         21m
+#
+# k get httproute kong
+#
+# curl -I gateway-example-kong.com/
+#   HTTP/1.1 200 OK
+#   X-Kong-Upstream-Latency: 0
+#   X-Kong-Proxy-Latency: 1
+#   Via: kong/3.6.1
+#   X-Kong-Request-Id: 6bb2c51e64b5716a7a8f44746a2c4323

@@ -8,3 +8,18 @@ includes:
   kluctl-gitops:
     taskfile: ./kluctl-gitops/Taskfile.yaml
     dir: ./kluctl-gitops
+
+# k get kluctldeployments -A
+# k get pod -n kluctl-system
+#   NAME                                 READY   STATUS    RESTARTS   AGE
+#   kluctl-controller-6fd5686869-mbk59   1/1     Running   0          26m
+#   kluctl-webui-6fbbfbc898-l96ws        1/1     Running   0          26m
+#
+# kubectl -n kluctl-system get secret webui-secret -o jsonpath='{.data.admin-password}' | base64 -d
+#
+# k get svc -n kluctl-system
+#   NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+#   kluctl-webui   ClusterIP   10.96.252.75   <none>        8080/TCP   29m
+#
+# kubectl -n kluctl-system port-forward svc/kluctl-webui 8080
+# http://localhost:8080/
