@@ -70,12 +70,12 @@ jobs:
       - uses: actions/setup-go@v5
         if: matrix.path == '06-demo-application/api-golang'
         with:
-          go-version: "1.22.x"
+          go-version: "1.24.x"
 
       - uses: ko-build/setup-ko@v0.6
         if: matrix.path == '06-demo-application/api-golang'
         with:
-          version: v0.15.4
+          version: v0.17.1
 
       - name: Build Image
         env:
